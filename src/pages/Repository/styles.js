@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import tinycolor from 'tinycolor2';
 
 export const Loading = styled.div`
   color: #fff;
@@ -93,7 +94,10 @@ export const Owner = styled.header`
 
 export const Span = styled.span`
   background: ${(props) => `#${props.color}`};
-  color: #333;
+  color: ${(props) => {
+    if (tinycolor(props.color).isDark()) return '#FFF';
+    return '#333';
+  }};
   border-radius: 2px;
   font-size: 12px;
   font-weight: 600px;
