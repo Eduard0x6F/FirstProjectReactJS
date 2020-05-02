@@ -94,10 +94,7 @@ export const Owner = styled.header`
 
 export const Span = styled.span`
   background: ${(props) => `#${props.color}`};
-  color: ${(props) => {
-    if (tinycolor(props.color).isDark()) return '#FFF';
-    return '#333';
-  }};
+  color: ${(props) => (tinycolor(props.color).isDark() ? '#FFF' : '#333')};
   border-radius: 2px;
   font-size: 12px;
   font-weight: 600px;
