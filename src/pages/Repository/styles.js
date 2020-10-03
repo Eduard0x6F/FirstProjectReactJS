@@ -86,7 +86,7 @@ export const Owner = styled.header`
     margin-top: 5px;
     font-size: 14px;
     color: #666;
-    line-height: 1.4;
+    line-height: 1.5;
     text-align: center;
     max-width: 400px;
   }
